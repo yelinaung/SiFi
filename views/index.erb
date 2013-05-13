@@ -1,0 +1,39 @@
+<title> Files </title>
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+
+<div class="row">
+<div class="span8">
+<table class="table table-hover">
+  <thread>
+    <tr>
+      <th> Name </th>
+      <th> </th>
+    </tr>
+  </thread>
+  <tbody>
+  <% for f in @files %>
+  <tr>
+    <td>
+    <ul>
+      <li>
+        <%= f.gsub(/books\//,'')%>
+      </li>
+    </ul>
+    </td>
+
+    <td>
+    </td>
+
+    <td>
+      <a href='/dl/<%= f.gsub(/books\//,'')%>'>
+        <button class="btn btn-primary" type="button"> Download </button>
+      </a>
+    </td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+
