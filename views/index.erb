@@ -30,7 +30,7 @@
     </td>
 
     <td>
-      <a href='/dl/<%= f.to_s %>'><button class="btn btn-primary" type="button"> Download </button></a>
+      <a href='/dl/<%= File.basename(f) %>'><button class="btn btn-primary" type="button"> Download </button></a>
     </td>
   </tr>
   <% end %>
