@@ -16,7 +16,7 @@
     <td>
     <ul>
       <li>
-        <%= f.gsub(/books\//,'')%>
+        <%= File.basename(f) %>
       </li>
     </ul>
     </td>
@@ -25,7 +25,7 @@
     </td>
 
     <td>
-      <a href='/dl/<%= f.gsub(/books\//,'')%>'>
+      <a href='/dl/<%= File.basename(f)%>'>
         <button class="btn btn-primary" type="button"> Download </button>
       </a>
     </td>
