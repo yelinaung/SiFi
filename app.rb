@@ -20,18 +20,9 @@ get '/files' do
   erb :index
 end
 
-get '/files/pdf' do
-  @files = Dir.glob('books/*.pdf')
-  erb :index
-end
 
-get '/files/epub' do
-  @files = Dir.glob('books/*.epub')
-  erb :index
-end
-
-get '/files/mobi' do
-  @files = Dir.glob('books/*.mobi')
+get '/files/:filetype' do
+  @files = Dir.glob("books/*.#{params[:filetype]}")
   erb :index
 end
 
