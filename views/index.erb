@@ -1,4 +1,6 @@
+<!DOCTYPE html>
 <title> Files </title>
+<link href="../css/style.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
 
 <div class="row">
@@ -11,6 +13,9 @@
     </tr>
   </thread>
   <tbody>
+  <tr>
+    <%= @files %>
+  </tr>
   <% for f in @files %>
   <tr>
     <td>
@@ -25,15 +30,23 @@
     </td>
 
     <td>
-      <a href='/dl/<%= File.basename(f)%>'>
-        <button class="btn btn-primary" type="button"> Download </button>
-      </a>
+      <a href='/dl/<%= f.to_s %>'><button class="btn btn-primary" type="button"> Download </button></a>
     </td>
   </tr>
   <% end %>
   </tbody>
 </table>
 </div>
+
+<div class="span3 file">
+  <a href='/files'><button class="btn btn-info"> All Files </button></a></br>
+  <a href='/files/pdf'><button class="btn btn-info"> PDF </button></a></br>
+  <a href='/files/epub'><button class="btn btn-info"> Epub </button></a></br>
+  <a href='/files/mobi'><button class="btn btn-info"> Mobi </button></a>
+
 </div>
+</div>
+
+
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 

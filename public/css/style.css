@@ -1,0 +1,10 @@
+.file a {
+  position: relative;
+  top: 20px;
+  text-decoration:none;
+  line-height: 3em;
+}
+
+.file button {
+  width: 100px !important;
+}

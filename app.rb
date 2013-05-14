@@ -1,7 +1,11 @@
 require 'sinatra'
 
+configure do
+  set :public_folder, File.dirname(__FILE__) + '/public'
+end
+
 # redirect index to /files
-get '/' do
+  get '/' do
   redirect to ('/files')
 end
 
@@ -12,7 +16,22 @@ get '/dl/:filename' do |file|
 end
 
 get '/files' do
-    @files = Dir.glob('books/*')
-    erb :index
+  @files = Dir.glob('books/*')
+  erb :index
+end
+
+get '/files/pdf' do
+  @files = Dir.glob('books/*.pdf')
+  erb :index
+end
+
+get '/files/epub' do
+  @files = Dir.glob('books/*.epub')
+  erb :index
+end
+
+get '/files/mobi' do
+  @files = Dir.glob('books/*.mobi')
+  erb :index
 end
 
