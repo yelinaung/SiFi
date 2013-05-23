@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<title> Files </title>
+<title> SiFi ★ </title>
 <link href="../css/style.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+<script>window.jQuery || document.write('<link href="../css/bootstrap.css" rel="stylesheet">')</script>
 
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">SiFi ★</a>
+    <ul class="nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="files">Browse</a></li>
+      <li><a href="upload">Upload</a></li>
+    </ul>
+  </div>
+</div>
 <div class="row">
 <div class="span8">
 <table class="table table-hover">
-  <thread>
-    <tr>
-      <th> Name </th>
-      <th> </th>
-    </tr>
-  </thread>
   <tbody>
   <tr>
+    <td colspan="2"><center> Name </center></td>
   </tr>
   <% for f in @files %>
   <tr>
@@ -25,8 +31,6 @@
     </ul>
     </td>
 
-    <td>
-    </td>
 
     <td>
       <a href='/dl/<%= File.basename(f) %>'><button class="btn btn-primary" type="button"> Download </button></a>
@@ -47,7 +51,7 @@
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="../js/jquery.min.js"><\/script>')</script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/bootstrap.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="../js/bootstrap.min.js"><\/script>')</script>
 

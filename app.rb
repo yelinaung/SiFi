@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/reloader'
 
 configure do
   set :public_folder, File.dirname(__FILE__) + '/public'
@@ -26,3 +27,7 @@ get '/files/:filetype' do
   erb :index
 end
 
+# Upload
+get '/upload' do
+  "This is upload!"
+end
