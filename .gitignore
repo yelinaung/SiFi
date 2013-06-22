@@ -20,3 +20,6 @@ doc/
 
 # OSX Crap
 .DS_Store
+
+# Upload Path
+books/
