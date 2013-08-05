@@ -8,7 +8,7 @@ Simple Fileserver using Sinatra
 $ git clone git@github.com:yelinaung/SiFi.git
 $ cd SiFi
 $ bundle install
-$ ruby app.rb
+$ ruby app/app.rb
 (or)
 $ rake run
 ```

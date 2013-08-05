@@ -6,5 +6,5 @@ end
 
 desc 'Running the app'
 task :run do
-  ruby "app.rb -s puma"
+  ruby "app/app.rb -s puma"
 end
