@@ -1,39 +1,65 @@
 <!DOCTYPE html>
 <title> SiFi ★ </title>
 <link href="../css/style.css" rel="stylesheet">
-<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 <script>window.jQuery || document.write('<link href="../css/bootstrap.css" rel="stylesheet">')</script>
-<a href="https://github.com/yelinaung/SiFi"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+<a href="https://github.com/yelinaung/SiFi"><img style="z-index:1031; position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 
-<div class="navbar">
-  <div class="navbar-inner">
-    <a class="brand" href="#">SiFi ★</a>
-    <ul class="nav">
-      <li><a href="/">Home</a></li>
-      <li><a href="files">Browse</a></li>
-      <li class="active"><a href="upload">Upload</a></li>
-    </ul>
+  <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">SiFi ★</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="/files">Browse</a></li>
+      <li><a href="/upload">Upload</a></li>
+      </ul>
+    </nav>
   </div>
-</div>
+</header>
+
+<div class="container">
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+  </div>
+
+  <div class="collapse navbar-collapse navbar-inverse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
 <div class="row">
-<div class="span8 offset1">
+<div class="col-md-8 offset1">
 <form action='/upload' enctype="multipart/form-data" method='POST'>
   <input name="file" type="file" />
+  <br>
   <button class="btn btn-primary" type="submit"> Upload </button>
 </form>
 </div>
 </div>
+<br>
+
 <div class="footer">
   <div class="container">
-    <div class="span8 center offset2">
+    <div class="col-md-8 center offset2">
     <p class="footer-text">
       <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=yelinaung&amp;repo=SiFi&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe><iframe src="http://ghbtns.com/github-btn.html?user=yelinaung&repo=SiFi&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="53" height="20"></iframe>
       </p>
       </div>
     </div>
   </div>
+</div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../js/jquery.min.js"><\/script>')</script>
-<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script>window.jQuery || document.write('<script src="../js/bootstrap.min.js"><\/script>')</script>
 
