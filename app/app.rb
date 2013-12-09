@@ -1,6 +1,19 @@
 require 'sinatra'
 require 'sinatra/reloader'
 
+
+def authorized?
+  @auth ||=  Rack::Auth::Basic::Request.new(request.env)
+  @auth.provided? && @auth.basic? && @auth.credentials && @auth.credentials == ["admin","admin"]
+end
+
+def protected!
+  unless authorized?
+    response['WWW-Authenticate'] = %(Basic realm="Restricted Area")
+    throw(:halt, [401, "Oops... we need your login name & password\n"])
+  end
+end
+
 configure do
   set :public_folder, File.dirname(__FILE__) + '/public'
 end
@@ -30,6 +43,7 @@ end
 
 # Upload
 get '/upload' do
+  protected!
   erb :upload
 end
 
