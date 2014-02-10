@@ -1,20 +1,20 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    backports (3.3.5)
+    backports (3.5.0)
     daemons (1.1.9)
     eventmachine (1.0.3)
-    kgio (2.8.1)
-    multi_json (1.8.2)
+    kgio (2.9.1)
+    multi_json (1.8.4)
     puma (2.7.1)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
-    rack-protection (1.5.1)
+    rack-protection (1.5.2)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
     raindrops (0.12.0)
-    rake (10.1.0)
+    rake (10.1.1)
     sinatra (1.4.4)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -31,7 +31,7 @@ GEM
       eventmachine (>= 1.0.0)
       rack (>= 1.0.0)
     tilt (1.4.1)
-    unicorn (4.7.0)
+    unicorn (4.8.2)
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
